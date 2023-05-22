@@ -8,6 +8,28 @@ struct AlarmsView: View {
                 .ignoresSafeArea()
             
             VStack {
+                HStack{
+                    Spacer()
+                        .frame(width: 30)
+                    Text("Alarm")
+                        .font(.largeTitle)
+                    Spacer()
+                
+                    Image(systemName: "plus")
+                        .font(.largeTitle)
+                    Spacer()
+                        .frame(width: 30)
+                    VStack{
+                        Circle()
+                            .frame(width: 5,height: 5)
+                        Circle()
+                            .frame(width: 5,height: 5)
+                        Circle()
+                            .frame(width: 5,height: 5)
+                    }
+                    Spacer()
+                        .frame(width: 30)
+                }
                 ScrollView {
                     ForEach(allAlarms) { alarm in
                         ZStack {
